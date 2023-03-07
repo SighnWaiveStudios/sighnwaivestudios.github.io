@@ -4,10 +4,9 @@ import SocialLinks from "./SocialLinks";
 
 const StyledFooter = styled.footer`
   min-height: var(--min-footer-height);
-  background: var(--primary);
-
+  background: var(--primary-dark);
   a {
-    color: #45413c;
+    color: #161616;
 
     &:hover {
       color: #fbfdff;

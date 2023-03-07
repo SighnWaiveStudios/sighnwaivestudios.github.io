@@ -88,8 +88,8 @@ export default function ContactForm() {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mx-auto mb-3 form-group" controlId="message">
-          <Form.Label>Message</Form.Label>
-          <Form.Control required as="textarea" placeholder="Your message..." />
+          <Form.Label>What can we do for you?</Form.Label>
+          <Form.Control required as="textarea" placeholder="Your request..." />
           <Form.Control.Feedback type="invalid">
             <h5>Please provide a valid message.</h5>
           </Form.Control.Feedback>

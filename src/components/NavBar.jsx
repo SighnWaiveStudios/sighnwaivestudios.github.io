@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { FixedNavSpacer, ToggleSwitch } from "./globalStyledComponents";
 // Images
-import Logo from "../images/logo.svg";
+import Logo from "../images/SW_Sneaky.png";
 
 export default function NavBar() {
   const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
@@ -25,7 +25,7 @@ export default function NavBar() {
         <Container>
           <Navbar.Brand>
             <img
-              alt="React Logo"
+              alt="SighnWaive Studios Logo"
               src={Logo}
               width="35"
               height="35"

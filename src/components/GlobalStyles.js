@@ -7,11 +7,11 @@ Variables
 ===============
 */
 :root {
-  --primary-light: #b0edfd;
   /* Primary Color */
-  --primary: #61DBFB;
-  --primary-dark: #316e7e;
-  --border: 1px solid #61DBFB;
+  --primary: #eca950;
+  --primary-light: #ffa111;
+  --primary-dark: #8f2d06;
+  --border: 1px solid #eca950;
   --transition: all 0.3s linear;
   --nav-height: 61px;
   --min-footer-height: 11vh;
@@ -43,8 +43,8 @@ a:hover {
   color: ${({ theme }) => theme.color};
 
   &:hover {
-        color: var(--primary);
-      }
+    color: var(--primary);
+  }
 }
 
 .section {
@@ -55,7 +55,7 @@ a:hover {
 }
 
 .title {
-    font-family: "Permanent Marker";
+  font-family: "Permanent Marker";
 }
 
 .card {
@@ -82,15 +82,15 @@ a:hover {
     font-size: 3rem;
   }
   .form-group {
-      max-width: 750px;
-    }
+    max-width: 750px;
+  }
 }
 
- @media screen and (min-width: 1367px) {
+@media screen and (min-width: 1367px) {
   .link-icons:hover {
     color: var(--primary);
   }
-  }
+}
 `;
 
 export default GlobalStyles;
