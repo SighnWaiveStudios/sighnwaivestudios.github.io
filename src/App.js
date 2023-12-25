@@ -6,7 +6,7 @@ import {
   selectError,
   selectIsLoading,
 } from "./pages/homeSlice";
-import { fetchGitHubReops } from "./pages/allProjectsSlice";
+import { fetchGitHubRepos } from "./pages/allProjectsSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 // Components
@@ -45,7 +45,7 @@ export default function App() {
         darkMode ? setTheme("dark") : setTheme("light");
       updateTheme();
       dispatch(fetchGitHubInfo());
-      dispatch(fetchGitHubReops());
+      dispatch(fetchGitHubRepos());
     },
     [setTheme, dispatch]
   );

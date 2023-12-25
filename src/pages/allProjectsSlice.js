@@ -10,8 +10,8 @@ const initialState = {
 
 export const url = `https://api.github.com/users/${githubUsername}/repos?per_page=100`;
 
-export const fetchGitHubReops = createAsyncThunk(
-  "allProjects/fetchGitHubReops",
+export const fetchGitHubRepos = createAsyncThunk(
+  "allProjects/fetchGitHubRepos",
   async (thunkApi, { rejectWithValue }) => {
     try {
       const response = await fetch(url).then(function (res) {
@@ -35,11 +35,11 @@ export const allProjectsSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(fetchGitHubReops.pending, (state) => {
+      .addCase(fetchGitHubRepos.pending, (state) => {
         state.isLoading = true;
         state.error = "";
       })
-      .addCase(fetchGitHubReops.fulfilled, (state, action) => {
+      .addCase(fetchGitHubRepos.fulfilled, (state, action) => {
         state.isLoading = false;
         state.data = action.payload;
         projectCardImages.forEach(function (element) {
@@ -50,7 +50,7 @@ export const allProjectsSlice = createSlice({
           });
         });
       })
-      .addCase(fetchGitHubReops.rejected, (state, action) => {
+      .addCase(fetchGitHubRepos.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
         console.log(state.error);
